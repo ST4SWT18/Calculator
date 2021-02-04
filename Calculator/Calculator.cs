@@ -23,6 +23,6 @@ namespace Calculator
         {
             return Math.Round(Math.Pow(x, exp), 1);
         }
-        //HEJ med dig
+        //HEJ med dig igen
     }
 }
