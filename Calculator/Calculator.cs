@@ -19,6 +19,7 @@ namespace Calculator
             return Math.Round(a * b, 1);
         }
 
+        //HER :D
         public double Divide(double a, double b)
         {
             return Math.Round(a / b, 1);
