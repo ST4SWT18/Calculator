@@ -19,6 +19,11 @@ namespace Calculator
             return Math.Round(a * b, 1);
         }
 
+        public double Divide(double a, double b)
+        {
+            return Math.Round(a / b, 1);
+        }
+
         public double Power(double x, double exp)
         {
             return Math.Round(Math.Pow(x, exp), 1);

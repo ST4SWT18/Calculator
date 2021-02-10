@@ -46,6 +46,17 @@ namespace Calculator.UnitTests
             Assert.That(exp, Is.EqualTo(product).Within(1E-15));
         }
 
+        [TestCase(0.7, 20, 30)]
+        [TestCase(0.7, 20.5, 30.5)]
+        [TestCase(0.7, 1.7, 2.3)]
+        [TestCase(0.4, -2, -4.5)]
+        public void Divide_TwoNumbers_AndReturnExp(double exp, double a, double b)
+        {
+            double product = uut.Divide(a, b);
+
+            Assert.That(exp, Is.EqualTo(product).Within(1E-15));
+        }
+
         [TestCase(8, 2, 3)]
         [TestCase(24.7, 2.5, 3.5)]
         [TestCase(3.4, 1.7, 2.3)]
