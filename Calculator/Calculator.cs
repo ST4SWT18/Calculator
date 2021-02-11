@@ -19,16 +19,25 @@ namespace Calculator
             return Math.Round(a * b, 1);
         }
 
-        //HER :D
         public double Divide(double a, double b)
         {
-            return Math.Round(a / b, 1);
+            if (b != 0)
+                return a / b;
+            else
+                throw new DivideByZeroException();
         }
 
         public double Power(double x, double exp)
         {
-            return Math.Round(Math.Pow(x, exp), 1);
+            return Math.Pow(x, exp);
         }
-        //HEJ med dig igen
+
+        public double Root(double x, double root)
+        {
+            if (root != 0 && x>=0)
+                return Math.Pow(x, 1.0 / root);
+            else
+                throw new Exception();
+        }
     }
 }
